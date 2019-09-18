@@ -41,10 +41,6 @@ using android::init::property_set;
 
 void vendor_load_properties()
 {
-    std::string platform = GetProperty("ro.board.platform", "");
-    if (platform != ANDROID_TARGET)
-        return;
-
     std::string bootloader = GetProperty("ro.bootloader", "");
 
     if (bootloader.find("I9301I") == 0) {
