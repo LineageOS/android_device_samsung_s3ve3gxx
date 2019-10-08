@@ -1,6 +1,4 @@
-#!/bin/bash
-#
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,12 +11,16 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-set -e
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-export DEVICE=s3ve3gxx
-export DEVICE_COMMON=s3ve3g-common
-export VENDOR=samsung
+# Inherit from s3ve3g device
+$(call inherit-product, device/samsung/s3ve3gxx/device.mk)
 
-./../$DEVICE_COMMON/extract-files.sh $@
+# Set those variables here to overwrite the inherited values.
+PRODUCT_NAME := full_s3ve3gxx
+PRODUCT_DEVICE := s3ve3gxx
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
+PRODUCT_MODEL := s3ve3gxx
