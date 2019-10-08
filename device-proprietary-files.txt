@@ -1,3 +1,7 @@
+## GSM Blobs - Pinned to G900FXXS1BPCL_G900FOXA1BOJ1_BTU versions
+# Radio
+lib/libsec-ril.so:vendor/lib/libsec-ril.so|075570a628f465f92f3067afcefb6938d4e5dc3a
+
 # Sony Camera Specific Blobs - Pinned to Sony sensor specific files 
 lib/B08QT_libTsAe.so:vendor/lib/B08QT_libTsAe.so|b26488bba1d9a408794ffeef99b334d710abde69
 lib/B08QT_libTsAf.so:vendor/lib/B08QT_libTsAf.so|3d006b74c809aae094deb069a0ef29db4728f585
