@@ -45,24 +45,27 @@ void vendor_load_properties()
 
     if (bootloader.find("I9301I") == 0) {
         /* s3ve3gxx */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/s3ve3gxx/s3ve3g:4.4.2/KOT49H/I9301IXXUANL1:user/release-keys");
         property_override("ro.build.description", "s3ve3gds-user 4.4.2 KOT49H I9301IXXUANL1 release-keys");
-        property_override_dual("ro.product.model", "ro.product.vendor.model", "GT-I9301I");
-        property_override_dual("ro.product.device", "ro.product.vendor.device", "s3ve3g");
+        set_ro_product_prop("device", "s3ve3gxx");
+        set_build_fingerprint("samsung/s3ve3gxx/s3ve3g:4.4.2/KOT49H/I9301IXXUANL1:user/release-keys");
+        set_ro_product_prop("model", "GT-I9301I");
+        set_ro_product_prop("name", "s3ve3gxx");
         gsm_properties("3", "0");
     } else if (bootloader.find("I9301Q") == 0) {
         /* s3ve3gjv */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/s3ve3gjv/s3ve3g:4.4.2/KOT49H/I9301QXXUANH1:user/release-keys");
         property_override("ro.build.description", "samsung/s3ve3gjv/s3ve3g:4.4.2/KOT49H/I9301QXXUANH1:user/release-keys");
-        property_override_dual("ro.product.model", "ro.product.vendor.model", "GT-I9301Q");
-        property_override_dual("ro.product.device", "ro.product.vendor.device", "s3ve3gjv");
+        set_ro_product_prop("device", "s3ve3gjv");
+        set_build_fingerprint("samsung/s3ve3gjv/s3ve3g:4.4.2/KOT49H/I9301QXXUANH1:user/release-keys");
+        set_ro_product_prop("model", "GT-I9301Q");
+        set_ro_product_prop("name", "s3ve3gjv");
         gsm_properties("3", "0");
     } else if (bootloader.find("I9300I") == 0) {
         /* s3ve3gdsds */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/s3ve3gdsxx/s3ve3gds:4.4.4/KTU84P/I9300IXWUBNJ1:user/release-keys");
         property_override("ro.build.description", "s3ve3gdsxx-user 4.4.4 KTU84P I9300IXWUBNJ1 release-keys");
-        property_override_dual("ro.product.model", "ro.product.vendor.model", "GT-I9300I");
-        property_override_dual("ro.product.device", "ro.product.vendor.device", "s3ve3gds");
+        set_ro_product_prop("device", "s3ve3gds");
+        set_build_fingerprint("samsung/s3ve3gdsxx/s3ve3gds:4.4.4/KTU84P/I9300IXWUBNJ1:user/release-keys");
+        set_ro_product_prop("model", "GT-I9300I");
+        set_ro_product_prop("name", "s3ve3gds");
         gsm_properties("3", "0");
     } else {
         gsm_properties("3", "0");
