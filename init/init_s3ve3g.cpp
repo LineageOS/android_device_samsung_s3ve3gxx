@@ -58,7 +58,7 @@ void init_target_properties()
 
     if (bootloader.find("I9301I") == 0) {
         /* s3ve3gds */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/s3ve3gds/s3ve3g:4.4.2/KOT49H/I9301IXXUANL1:user/release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/s3ve3gxx/s3ve3g:4.4.2/KOT49H/I9301IXXUANL1:user/release-keys");
         property_override("ro.build.description", "s3ve3gds-user 4.4.2 KOT49H I9301IXXUANL1 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "GT-I9301I");
         property_override_dual("ro.product.device", "ro.vendor.product.device", "s3ve3g");
