@@ -24,8 +24,7 @@ TARGET_LD_SHIM_LIBS += \
 TARGET_KERNEL_CONFIG := lineage_s3ve3gxx_defconfig
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_msm8226
-TARGET_LIBINIT_MSM8226_DEFINES_FILE := device/samsung/s3ve3gxx/init/init_s3ve3g.cpp
+TARGET_INIT_VENDOR_LIB := libinit_s3ve3g
 
 # NFC
 # include $(COMMON_PATH)/nfc/pn547/board.mk
