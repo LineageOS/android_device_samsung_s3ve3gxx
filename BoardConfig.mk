@@ -16,6 +16,8 @@
 # inherit from common s3ve3g
 include device/samsung/s3ve3g-common/BoardConfigCommon.mk
 
+DEVICE_PATH := device/samsung/s3ve3gxx
+
 # Shims
 TARGET_LD_SHIM_LIBS += \
         /system/vendor/lib/libmmcamera_imx175.so|libshim_imx175.so
@@ -24,7 +26,7 @@ TARGET_LD_SHIM_LIBS += \
 TARGET_KERNEL_CONFIG := lineage_s3ve3gxx_defconfig
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_s3ve3g
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_s3ve3g
 
 # NFC
 # include $(COMMON_PATH)/nfc/pn547/board.mk
