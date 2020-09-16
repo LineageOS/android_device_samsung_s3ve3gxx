@@ -37,7 +37,6 @@
 #include "init_msm8226.h"
 
 using android::base::GetProperty;
-using android::init::property_set;
 
 void vendor_load_properties()
 {
