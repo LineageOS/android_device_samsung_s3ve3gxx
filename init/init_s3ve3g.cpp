@@ -1,6 +1,6 @@
 /*
    Copyright (c) 2016, The Linux Foundation. All rights reserved.
-   Copyright (c) 2017-2018, The LineageOS Project. All rights reserved.
+   Copyright (c) 2017-2020, The LineageOS Project. All rights reserved.
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -28,27 +28,18 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <stdlib.h>
-#include <stdio.h>
 
 #include <android-base/logging.h>
 #include <android-base/properties.h>
 
 #include "property_service.h"
-#include "vendor_init.h"
 
 #include "init_msm8226.h"
 
 using android::base::GetProperty;
 using android::init::property_set;
 
-void gsm_properties()
-{
-    property_set("ro.telephony.default_network", "3");
-    property_set("telephony.lteOnGsmDevice", "0");
-}
-
-void init_target_properties()
+void vendor_load_properties()
 {
     std::string platform = GetProperty("ro.board.platform", "");
     if (platform != ANDROID_TARGET)
@@ -60,25 +51,25 @@ void init_target_properties()
         /* s3ve3gxx */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/s3ve3gxx/s3ve3g:4.4.2/KOT49H/I9301IXXUANL1:user/release-keys");
         property_override("ro.build.description", "s3ve3gds-user 4.4.2 KOT49H I9301IXXUANL1 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "GT-I9301I");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "s3ve3g");
-        gsm_properties();
+        property_override_dual("ro.product.model", "ro.product.vendor.model", "GT-I9301I");
+        property_override_dual("ro.product.device", "ro.product.vendor.device", "s3ve3g");
+        gsm_properties("3", "0");
     } else if (bootloader.find("I9301Q") == 0) {
         /* s3ve3gjv */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/s3ve3gjv/s3ve3g:4.4.2/KOT49H/I9301QXXUANH1:user/release-keys");
         property_override("ro.build.description", "samsung/s3ve3gjv/s3ve3g:4.4.2/KOT49H/I9301QXXUANH1:user/release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "GT-I9301Q");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "s3ve3gjv");
-        gsm_properties();
+        property_override_dual("ro.product.model", "ro.product.vendor.model", "GT-I9301Q");
+        property_override_dual("ro.product.device", "ro.product.vendor.device", "s3ve3gjv");
+        gsm_properties("3", "0");
     } else if (bootloader.find("I9300I") == 0) {
         /* s3ve3gdsds */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/s3ve3gdsxx/s3ve3gds:4.4.4/KTU84P/I9300IXWUBNJ1:user/release-keys");
         property_override("ro.build.description", "s3ve3gdsxx-user 4.4.4 KTU84P I9300IXWUBNJ1 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "GT-I9300I");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "s3ve3gds");
-        gsm_properties();
+        property_override_dual("ro.product.model", "ro.product.vendor.model", "GT-I9300I");
+        property_override_dual("ro.product.device", "ro.product.vendor.device", "s3ve3gds");
+        gsm_properties("3", "0");
     } else {
-        gsm_properties();
+        gsm_properties("3", "0");
     }
 
     std::string device = GetProperty("ro.product.device", "");
