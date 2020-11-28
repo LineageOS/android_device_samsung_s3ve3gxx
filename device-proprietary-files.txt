@@ -1,6 +1,6 @@
 ## GSM Blobs - Pinned to Samsung Galaxy S5 Mini G800HXXU1CRJ1_G800HXEO1CRJ1
 # Radio
-lib/libsec-ril.so:vendor/lib/libsec-ril.so|6215658f58ea4c92cb70f761dfefdb22cbab5f38
+lib/libsec-ril.so:vendor/lib/libsec-ril.so|b721e941f2adf92864641ca64d5ea2a139941252
 
 # Sony Camera Specific Blobs - Pinned to Sony sensor specific files 
 lib/B08QT_libTsAe.so:vendor/lib/B08QT_libTsAe.so|b26488bba1d9a408794ffeef99b334d710abde69
