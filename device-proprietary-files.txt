@@ -2,20 +2,20 @@
 # Radio
 lib/libsec-ril.so:vendor/lib/libsec-ril.so|6215658f58ea4c92cb70f761dfefdb22cbab5f38
 
-# Sony Camera Specific Blobs - Pinned to Sony sensor specific files 
+# Sony Camera Specific Blobs - Pinned to I9301IXXUAPG3_I9301IOJVUAPG2
 lib/B08QT_libTsAe.so:vendor/lib/B08QT_libTsAe.so|b26488bba1d9a408794ffeef99b334d710abde69
 lib/B08QT_libTsAf.so:vendor/lib/B08QT_libTsAf.so|3d006b74c809aae094deb069a0ef29db4728f585
 lib/B08QT_libTs_J_Accm.so:vendor/lib/B08QT_libTs_J_Accm.so|25c0090e2c0e59488a2b05401b24efa6609e9e77
 lib/B08QT_libTs_J_Awb.so:vendor/lib/B08QT_libTs_J_Awb.so|50e98007d1eac87bbcbd5756a1111aa789425aec
-lib/libmmcamera2_stats_algorithm.so:vendor/lib/libmmcamera2_stats_algorithm.so|2dacf8ed67a02b27592eaec8ad8fb9b5de767ed4
-lib/libmmcamera_fidelix_eeprom.so:vendor/lib/libmmcamera_fidelix_eeprom.so|d3e43f57e959efe4ce2fd67493677629fb730d00
-vendor/lib/libmmcamera2_iface_modules.so|008da58c27bb27bdee46316bd673990c72069fbc
-vendor/lib/libmmcamera2_imglib_modules.so|0fd2ece2b02f41fe143c15941c9d4f157351d93f
-vendor/lib/libmmcamera2_isp_modules.so|0cc1884257662b0a13b0331785af0356d42f7f44
-vendor/lib/libmmcamera2_sensor_modules.so|cf5ae9f20e3748421909052a41aba34f13014165
-vendor/lib/libmmcamera2_stats_modules.so|6d6b09bb62a66931468e63d724e6fa643d92e27e
+lib/libmmcamera2_stats_algorithm.so:vendor/lib/libmmcamera2_stats_algorithm.so|5a1db93abf206e67cd743746ebb511d71a437f61
+lib/libmmcamera_fidelix_eeprom.so:vendor/lib/libmmcamera_fidelix_eeprom.so|68b82381a88539ac1b94d264bfa1ef2f784f7ead
+vendor/lib/libmmcamera2_iface_modules.so|db7ea74bb27c91b20eb8718f9b0e9ceb64214ae2
+vendor/lib/libmmcamera2_imglib_modules.so|0f0af04a8ebbf52042b53f62c8e048741639ad1c
+vendor/lib/libmmcamera2_isp_modules.so|197d2b383e34c3e3cbb2c4364cff9da549df1413
+vendor/lib/libmmcamera2_sensor_modules.so|0cb056e444a12eff8e45df1fb9089c75efe5d66e
+vendor/lib/libmmcamera2_stats_modules.so|795d54e96b185f4db2bc9496eb09fce4bd5c7cc2
 vendor/lib/libmmcamera_imx175.so|0bd21a0f983f5ef35b60c0735ad6b32adde0d8a7
-vendor/lib/liboemcamera.so|24008376a6d58ccb2775a177a78cd2e86ba576d4
+vendor/lib/liboemcamera.so|3f3da6150d0fb28edab43cf3858fb57c375232c3
 
 # Back Camera chromatix - Pinned to Samsung Galaxy S5 Mini G800HXXU1CRJ1_G800HXEO1CRJ1 
 vendor/lib/B08QT_libchromatix_imx175_common.so|c85cdc59966addf9e3d9b292749aafab12501d25
@@ -32,8 +32,8 @@ vendor/lib/B08QT_libchromatix_imx175_zslshot.so|8246bba3fcb81adc61333ca8a805c21c
 vendor/lib/libchromatix_imx175_common.so|d4c585cbdbae50e98e95658d0c04859b2b98dd26
 vendor/lib/libchromatix_imx175_preview.so|c56d3d5e85cc58e97d435b428ca2fe206cd58602
 
-# Sony Camera chromatix specific blobs - Pinned to Sony sensor specific files
+# Sony Camera chromatix specific blobs - Pinned to I9301IXXUAPG3_I9301IOJVUAPG2
 lib/libTs_J_Awb.so:vendor/lib/libTs_J_Awb.so|50e98007d1eac87bbcbd5756a1111aa789425aec
 
-# Firmware
-etc/B08QT_imx175_module_info.xml
+# Firmware - Pinned to I9301IXXUAPG3_I9301IOJVUAPG2
+etc/B08QT_imx175_module_info.xml|d64036a3b7967e6294fa4f7d2032039ce74301bd
