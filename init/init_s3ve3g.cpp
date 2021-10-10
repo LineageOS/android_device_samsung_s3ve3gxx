@@ -44,7 +44,7 @@ void vendor_load_properties()
 
     if (bootloader.find("I9301I") == 0) {
         /* s3ve3gxx */
-        property_override("ro.build.description", "s3ve3gds-user 4.4.2 KOT49H I9301IXXUANL1 release-keys");
+        property_override("ro.build.description", "s3ve3gxx-user 4.4.2 KOT49H I9301IXXUANL1 release-keys");
         set_ro_product_prop("device", "s3ve3gxx");
         set_ro_build_prop("fingerprint", "samsung/s3ve3gxx/s3ve3g:4.4.2/KOT49H/I9301IXXUANL1:user/release-keys");
         set_ro_product_prop("model", "GT-I9301I");
